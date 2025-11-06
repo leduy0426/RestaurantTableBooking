@@ -1,2 +1,16 @@
-/build/
-/dist/
+# Ignore NetBeans build files and private configs
+build/
+dist/
+nbproject/private/
+nbproject/genfiles.properties
+nbproject/build-impl.xml
+nbproject/ant-deploy.xml
+nbproject/project.properties
+
+# Ignore compiled Java files
+*.class
+
+# Ignore backup files
+*.log
+*.tmp
+*.bak
