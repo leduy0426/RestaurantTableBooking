@@ -12,14 +12,12 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.util.List;
-import models.Reservation;
 
 /**
  *
  * @author fpt
  */
-public class ReservationController extends HttpServlet {
+public class DeleteReservation extends HttpServlet {
    
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -36,10 +34,10 @@ public class ReservationController extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ReservationController</title>");  
+            out.println("<title>Servlet DeleteReservation</title>");  
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ReservationController at " + request.getContextPath () + "</h1>");
+            out.println("<h1>Servlet DeleteReservation at " + request.getContextPath () + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -58,12 +56,16 @@ public class ReservationController extends HttpServlet {
     throws ServletException, IOException {
         //processRequest(request, response);
         
-        StaffDAO sdao = new StaffDAO();
-        List<Reservation> customers = sdao.getAllCutomer();
-         
-        request.setAttribute("customers", customers);
-        request.getRequestDispatcher("views/staffDashboard.jsp").forward(request, response);
-        
+        String idParam = request.getParameter("id");
+
+        if (idParam != null && !idParam.isEmpty()) {
+            int id = Integer.parseInt(idParam);
+            StaffDAO dao = new StaffDAO();
+            dao.deleteReservation(id);
+        }
+
+      
+        response.sendRedirect("ReservationController");
     } 
 
     /** 
@@ -76,16 +78,7 @@ public class ReservationController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        //processRequest(request, response);
-        
-          StaffDAO sdao = new StaffDAO();
-
-        String name = request.getParameter("name");
-        List<Reservation> customers = sdao.getCustomerByName(name);
-        
-        
-        request.setAttribute("customers", customers);
-        request.getRequestDispatcher("views/staffDashboard.jsp").forward(request, response);
+        processRequest(request, response);
     }
 
     /** 

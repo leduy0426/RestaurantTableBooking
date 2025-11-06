@@ -45,7 +45,7 @@ public class StaffDAO extends DBContext{
         return null; 
     }
       
-       public Reservation GetCustomerById(int id){
+       public Reservation getCustomerById(int id){
 
         Reservation customer = null;
         try {
@@ -72,8 +72,8 @@ public class StaffDAO extends DBContext{
    return customer;
     }
       
-    public Reservation CreateCustomer(Reservation customer) {
-        Reservation found = GetCustomerById(customer.getId());
+    public Reservation createCustomer(Reservation customer) {
+        Reservation found = getCustomerById(customer.getId());
         if (found != null) {
             System.out.println("Customer had already exist!");
             return null;
@@ -136,6 +136,63 @@ public class StaffDAO extends DBContext{
     
   return customerList;
 }
-   
-   
+  public List<Reservation> getCustomerByName(String name) {
+    List<Reservation> customerList = new ArrayList<>();
+    String sql = "SELECT * FROM reservation WHERE customer_name LIKE ?";
+
+    try {
+        stm = connection.prepareStatement(sql);
+        stm.setString(1, "%" + name + "%");  // tìm gần đúng
+        rs = stm.executeQuery();
+
+        while (rs.next()) {
+            Reservation customer = new Reservation();
+            customer.setId(rs.getInt("id"));
+            customer.setCustomerName(rs.getString("customer_name"));
+            customer.setPhone(rs.getString("phone"));
+            customer.setTableNumber(rs.getInt("table_number"));
+            customer.setReservationTime(rs.getString("reservation_time"));
+            customer.setNumPeople(rs.getInt("num_people"));
+            customer.setNote(rs.getString("note"));
+
+            customerList.add(customer);
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+    return customerList;
+}
+
+public void updateReservation(int id, String name, String phone, int tableNumber,
+                              String reservationTime, int numPeople, String note) {
+    try {
+        String sql = "UPDATE reservation SET customer_name=?, phone=?, table_number=?, reservation_time=?, num_people=?, note=? WHERE id=?";
+        stm = connection.prepareStatement(sql);
+        stm.setString(1, name);
+        stm.setString(2, phone);
+        stm.setInt(3, tableNumber);
+        stm.setString(4, reservationTime);
+        stm.setInt(5, numPeople);
+        stm.setString(6, note);
+        stm.setInt(7, id);
+        stm.executeUpdate();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+
+public void deleteReservation(int id) {
+    try {
+        String sql = "DELETE FROM reservation WHERE id = ?";
+        stm = connection.prepareStatement(sql);
+        stm.setInt(1, id);
+        stm.executeUpdate();
+        System.out.println("Deleted reservation ID: " + id);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+
+
 }

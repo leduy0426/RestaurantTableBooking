@@ -5,6 +5,7 @@
 
 package controllers;
 
+import dal.ReservationDAO;
 import dal.StaffDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,14 +13,13 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.util.List;
 import models.Reservation;
 
 /**
  *
  * @author fpt
  */
-public class ReservationController extends HttpServlet {
+public class AddReservation extends HttpServlet {
    
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -36,10 +36,10 @@ public class ReservationController extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ReservationController</title>");  
+            out.println("<title>Servlet AddReservation</title>");  
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ReservationController at " + request.getContextPath () + "</h1>");
+            out.println("<h1>Servlet AddReservation at " + request.getContextPath () + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -56,14 +56,7 @@ public class ReservationController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        //processRequest(request, response);
-        
-        StaffDAO sdao = new StaffDAO();
-        List<Reservation> customers = sdao.getAllCutomer();
-         
-        request.setAttribute("customers", customers);
-        request.getRequestDispatcher("views/staffDashboard.jsp").forward(request, response);
-        
+        processRequest(request, response);
     } 
 
     /** 
@@ -77,16 +70,30 @@ public class ReservationController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         //processRequest(request, response);
-        
-          StaffDAO sdao = new StaffDAO();
+         String name = request.getParameter("customer_name");
+        String phone = request.getParameter("phone");
+        int tableNumber = Integer.parseInt(request.getParameter("table_number"));
+        String reservationTime = request.getParameter("reservation_time");
+        int numPeople = Integer.parseInt(request.getParameter("num_people"));
+        String note = request.getParameter("note");
 
-        String name = request.getParameter("name");
-        List<Reservation> customers = sdao.getCustomerByName(name);
-        
-        
-        request.setAttribute("customers", customers);
-        request.getRequestDispatcher("views/staffDashboard.jsp").forward(request, response);
+        // Tạo model
+        Reservation newCustomer = new Reservation();
+        newCustomer.setCustomerName(name);
+        newCustomer.setPhone(phone);
+        newCustomer.setTableNumber(tableNumber);
+        newCustomer.setReservationTime(reservationTime);
+        newCustomer.setNumPeople(numPeople);
+        newCustomer.setNote(note);
+
+        // Gọi DAO
+        StaffDAO dao = new StaffDAO();
+        dao.createCustomer(newCustomer);
+
+        // Quay lại danh sách
+        response.sendRedirect("ReservationController");
     }
+    
 
     /** 
      * Returns a short description of the servlet.

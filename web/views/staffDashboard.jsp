@@ -19,7 +19,7 @@
     <body>
         <form action="ReservationController" method="POST">
                 <header class="header">
-                    <h4>Search by Name: <input type="text" name="name"> <button type="submit">Search</button></h4>
+                    <h4>Search by Name: <input type="text" name="name" value="${param.name}"> <button type="submit">Search</button></h4>
                 </header>
             </form>
             <div class="table-container">
@@ -34,7 +34,7 @@
                         <th>Reservation Time</th>
                         <th>Number Of People</th>
                         <th>Note</th>
-
+                        <th>Action</th>    
                     </tr>
                     </thead>
                     <tbody>
@@ -49,35 +49,61 @@
                         <td>${customer.reservationTime}</td>
                         <td>${customer.numPeople}</td>
                         <td>${customer.note}</td>
-           
+                          <td>
+                  
+                    <a href="EditReservation?id=${customer.id}" class="btn btn-edit">Edit</a>
+
+                  
+                    <a href="DeleteReservation?id=${customer.id}" 
+                       class="btn btn-delete" 
+                       onclick="return confirm('Are you sure you want to delete this reservation?');">
+                       Delete
+                    </a>
+                </td>
                     </tr>
                     </c:forEach>
                     </tbody>
                 </table>
             </div>
 
-        <form class="form-section" action="ReservationController" method="POST">
-                <h4>Current Staff</h4>
-                <div class="form-row">
-                    <label>ID: <input type="text"></label>
-                    <label>Full Name: <input type="text"></label>
-                    <label>Phone: <input type="text"></label>
-                    <label>Birth Date: <input type="date"></label>
+        <form class="form-section" action="AddReservation" method="POST">
+    <h4>Manage Reservations</h4>
 
-                </div>
-                <div class="form-row">
-                    <label>Email: <input type="text"></label>
-                    <label>Position: <input type="text"></label>
-                    <label>Username: <input type="text"></label>
-                    <label>Password: <input type="text"></label>
-                </div>
-                <div>
-                    <button type="submit">ADD</button>
-                    <button type="submit">EDIT</button>
-                    <button type="submit">DELETE</button>
-                    <button type="submit">RESET</button>
-                </div>
-            </form>
-        </form>
+    <div class="form-row">
+        <label>Full Name:
+            <input type="text" name="customer_name" required>
+        </label>
+
+        <label>Phone:
+            <input type="text" name="phone" required>
+        </label>
+
+        <label>Table Number:
+            <input type="number" name="table_number" required>
+        </label>
+
+        <label>Reservation Time:
+            <input type="datetime-local" name="reservation_time" required>
+        </label>
+    </div>
+
+    <div class="form-row">
+        <label>Number of People:
+            <input type="number" name="num_people" required>
+        </label>
+
+        <label>Note:
+            <input type="text" name="note">
+        </label>
+    </div>
+
+    <div class="form-row">
+        <input type="hidden" name="action" value="add"> 
+        <button type="submit" name="action" value="add">ADD</button>
+        <button type="reset">RESET</button>
+    </div>
+</form>
+
+        
     </body>
 </html>

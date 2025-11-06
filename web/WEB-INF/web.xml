@@ -1,33 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
-    <servlet-mapping>
-<<<<<<< HEAD
-        <servlet-name>AdminController</servlet-name>
-        <url-pattern>/AdminController</url-pattern>
-=======
-        <servlet-name>ReservationController</servlet-name>
-        <url-pattern>/ReservationController</url-pattern>
->>>>>>> 5851a98 (get bang customer)
-    </servlet-mapping>
-    <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
-        <welcome-file>index.html</welcome-file>
-    </welcome-file-list>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee          https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
     <servlet>
         <servlet-name>LoginController</servlet-name>
         <servlet-class>controllers.LoginController</servlet-class>
     </servlet>
     <servlet>
-<<<<<<< HEAD
         <servlet-name>AdminController</servlet-name>
         <servlet-class>controllers.AdminController</servlet-class>
-=======
+    </servlet>
+    <servlet>
         <servlet-name>ReservationController</servlet-name>
         <servlet-class>controllers.ReservationController</servlet-class>
->>>>>>> 5851a98 (get bang customer)
+    </servlet>
+    <servlet>
+        <servlet-name>AddReservation</servlet-name>
+        <servlet-class>controllers.AddReservation</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditReservation</servlet-name>
+        <servlet-class>controllers.EditReservation</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteReservation</servlet-name>
+        <servlet-class>controllers.DeleteReservation</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/ForStaff</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminController</servlet-name>
+        <url-pattern>/AdminController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReservationController</servlet-name>
+        <url-pattern>/ReservationController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddReservation</servlet-name>
+        <url-pattern>/AddReservation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditReservation</servlet-name>
+        <url-pattern>/EditReservation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteReservation</servlet-name>
+        <url-pattern>/DeleteReservation</url-pattern>
     </servlet-mapping>
 </web-app>
