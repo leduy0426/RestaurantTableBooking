@@ -9,9 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Admin Dashboard</title>
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/admindashboard.css">
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <form action="AdminController" method="Post">
+            <a href="${pageContext.request.contextPath}/AdminController">Staff Management</a>
+            <a href="${pageContext.request.contextPath}/index.jsp">Customer Management</a>
+        </form>
     </body>
 </html>
