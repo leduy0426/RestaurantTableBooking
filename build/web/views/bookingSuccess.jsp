@@ -10,7 +10,7 @@
 <div class="box">
     <h2>Booking Successful!</h2>
     <p>Your table has been reserved.</p>
-    <a href="index.jsp">Back to Home</a>
+    <a href="${pageContext.request.contextPath}/index.jsp">Back to Home</a>
 </div>
 </body>
 </html>
