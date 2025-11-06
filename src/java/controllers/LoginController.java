@@ -1,6 +1,7 @@
 package controllers;
 
 import dal.AdminDAO;
+import dal.StaffDAO;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -9,6 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import models.Admin;
 import java.io.IOException;
+import models.Staff;
 
 //@WebServlet("/LoginServlet")
 public class LoginController extends HttpServlet {
@@ -25,11 +27,11 @@ public class LoginController extends HttpServlet {
         // Gọi DAO để kiểm tra đăng nhập
         AdminDAO dao = new AdminDAO();
         Admin admin = dao.checkLogin(username, password);
-
+        HttpSession session = request.getSession();
         if (role.equals("admin")) {
 
             if (admin != null) {
-                HttpSession session = request.getSession();
+               
                 session.setAttribute("admin", admin);
                 response.sendRedirect("views/adminDashboard.jsp");
                 
@@ -39,6 +41,20 @@ public class LoginController extends HttpServlet {
             }
         }
         
+
+        StaffDAO sdao = new StaffDAO();
+        Staff staff = sdao.checkLogin(username, password);
+        
+        if(role.equals("staff") && staff != null){
+              session.setAttribute("staff", staff);
+                response.sendRedirect("ReservationController");
+        }else{
+             request.setAttribute("error", "Sai tên đăng nhập hoặc mật khẩu!");
+                request.getRequestDispatcher("login.jsp").forward(request, response);
+        }
+        
+        
+
     }
 
     // Nếu có truy cập bằng GET, ta chuyển hướng về login.jsp luôn

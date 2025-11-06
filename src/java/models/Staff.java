@@ -20,7 +20,9 @@ public class Staff {
     public String email;
     public String address;
     public String username;
-    public String password;
+
+    public String password;   
+
 
     public Staff() {
     }
@@ -110,3 +112,5 @@ public class Staff {
     }
 
 }
+
+

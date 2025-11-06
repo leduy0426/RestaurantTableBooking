@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
     <servlet-mapping>
+<<<<<<< HEAD
         <servlet-name>AdminController</servlet-name>
         <url-pattern>/AdminController</url-pattern>
+=======
+        <servlet-name>ReservationController</servlet-name>
+        <url-pattern>/ReservationController</url-pattern>
+>>>>>>> 5851a98 (get bang customer)
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
@@ -13,8 +18,13 @@
         <servlet-class>controllers.LoginController</servlet-class>
     </servlet>
     <servlet>
+<<<<<<< HEAD
         <servlet-name>AdminController</servlet-name>
         <servlet-class>controllers.AdminController</servlet-class>
+=======
+        <servlet-name>ReservationController</servlet-name>
+        <servlet-class>controllers.ReservationController</servlet-class>
+>>>>>>> 5851a98 (get bang customer)
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
