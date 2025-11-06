@@ -16,6 +16,6 @@
     
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
-        <url-pattern>/LoginServlet</url-pattern>
+        <url-pattern>/ForStaff</url-pattern>
     </servlet-mapping>
 </web-app>
