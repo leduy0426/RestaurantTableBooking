@@ -1,6 +1,7 @@
 package controllers;
 
 import dal.AdminDAO;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -20,27 +21,33 @@ public class LoginController extends HttpServlet {
         // Lấy dữ liệu từ form
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        String role = request.getParameter("role");
 
         // Gọi DAO để kiểm tra đăng nhập
         AdminDAO dao = new AdminDAO();
         Admin admin = dao.checkLogin(username, password);
 
-        if (admin != null) {
-            // Nếu đúng tài khoản → tạo session và chuyển hướng
-            HttpSession session = request.getSession();
-            session.setAttribute("admin", admin);
-            response.sendRedirect("views/adminDashboard.jsp");
-        } else {
-            // Sai tài khoản hoặc mật khẩu
-            request.setAttribute("error", "Sai tên đăng nhập hoặc mật khẩu!");
-            request.getRequestDispatcher("view/login.jsp").forward(request, response);
+        if (role.equals("admin")) {
+
+            if (admin != null) {
+                HttpSession session = request.getSession();
+                session.setAttribute("admin", admin);
+                response.sendRedirect("views/adminDashboard.jsp");
+                
+            } else {
+                request.setAttribute("error", "Sai tên đăng nhập hoặc mật khẩu!");
+                request.getRequestDispatcher("login.jsp").forward(request, response);
+            }
         }
+        
+        
     }
 
     // Nếu có truy cập bằng GET, ta chuyển hướng về login.jsp luôn
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.sendRedirect("login.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+        rd.forward(request, response);
     }
 }

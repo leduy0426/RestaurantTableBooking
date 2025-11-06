@@ -9,7 +9,7 @@
 <body>
 <div class="header">
     Royal Dragon Restaurant
-    <a href="views/login.jsp">Login</a>
+    
 </div>
 <div class="content-wrapper">
     <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=60" class="side-img">
