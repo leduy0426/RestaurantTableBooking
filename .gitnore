@@ -1,0 +1,46 @@
+# =========================================
+#   JAVA WEB PROJECT - NETBEANS + TOMCAT
+# =========================================
+
+# === NetBeans project files ===
+nbproject/private/
+nbproject/private/**
+
+# === Build output directories ===
+build/
+dist/
+
+# === IDE-specific files ===
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+
+# === OS-specific files ===
+.DS_Store
+Thumbs.db
+
+# === Logs and temporary files ===
+*.log
+*.tmp
+*.bak
+*.swp
+
+# === Compiled class files ===
+*.class
+
+# === Java dependencies ===
+/target/
+/out/
+
+# === User-specific configuration ===
+*.properties~
+*.prefs
+
+# === Environment or deployment configs ===
+/web/WEB-INF/classes/
+/web/META-INF/
+
+# === Optional: ignore local environment setup ===
+.env
