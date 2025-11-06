@@ -19,7 +19,7 @@
         </select>
         <button type="submit">Login</button>
     </form>
-    <a href="index.jsp" class="back">← Back to Home</a>
+    <a href="../index.jsp" class="back">← Back to Home</a>
 </div>
 </body>
 </html>
