@@ -10,9 +10,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DBContext {
+
     protected Connection connection;
+
     public DBContext() {
-        //@Students: You are not allowed to edit this method  
+        //@Students: You are not allowed to edit this method 
         try {
             Properties properties = new Properties();
             InputStream inputStream = getClass().getClassLoader().getResourceAsStream("../ConnectDB.properties");
@@ -21,6 +23,7 @@ public class DBContext {
             } catch (IOException ex) {
                 Logger.getLogger(DBContext.class.getName()).log(Level.SEVERE, null, ex);
             }
+
             String user = properties.getProperty("userID");
             String pass = properties.getProperty("password");
             String url = properties.getProperty("url");
