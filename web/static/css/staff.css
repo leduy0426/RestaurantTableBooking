@@ -7,53 +7,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Author     : nhtuy
 */
 
-/* ===== Body & Layout ===== */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+body {
     font-family: Arial, sans-serif;
     background-color: #b8e0ec;
-    display: flex;
-    flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
-
-.main-container {
-    flex: 1 0 auto; /* phần nội dung chính giãn ra, footer luôn cuối */
-    width: 100%;
-}
-
-/* ===== Navigation Tabs ===== */
-.navigation-tabs {
-    display: flex;
-    gap: 10px;
-    padding: 15px;
-    background-color: #ffffff;
-    border-bottom: 2px solid #2a9fd6;
-    margin-bottom: 20px;
-}
-
-.nav-tab {
-    padding: 10px 20px;
-    background-color: #e6f5fa;
-    color: #2a9fd6;
-    text-decoration: none;
-    border-radius: 5px 5px 0 0;
-    font-weight: bold;
-    transition: all 0.3s;
-}
-
-.nav-tab:hover {
-    background-color: #b8dce9;
-    color: #1b7fab;
-}
-
-.nav-tab.active {
-    background-color: #2a9fd6;
-    color: white;
-}
-
-/* ===== Header ===== */
 .header {
     display: flex;
     justify-content: center;
@@ -61,6 +20,11 @@ html, body {
     padding: 15px;
     border-radius: 6px;
     gap: 10px;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header input[type="text"] {
@@ -83,7 +47,8 @@ html, body {
     background-color: #1b7fab;
 }
 
-/* ===== Table ===== */
+/* Table */
+
 .table-container {
     width: 95%;
     margin: 0 auto;
@@ -94,42 +59,54 @@ html, body {
     background-color: white;
 }
 
+.table-container {
+  width: 95%;
+  margin: 0 auto;
+  max-height: 350px;       
+  overflow-y: auto;       
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+}
+
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;    
+  border-collapse: collapse;      
 }
 
 th, td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
 }
 
 th {
-    position: sticky;
-    top: 0;
-    background-color: #e6f5fa;
-    font-weight: bold;
-    z-index: 2;
+  position: sticky;
+  top: 0;
+  background-color: #e6f5fa;
+  font-weight: bold;
+  z-index: 2;
 }
 
 tr:hover {
-    background-color: #f3fbfd;
+  background-color: #f3fbfd;
 }
 
-/* ===== Form Section ===== */
+
+/* Form section */
 .form-section {
-    background-color: #b8dce9;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    padding: 10px 15px;
+    background-color: #b8dce9;   /* nền xanh nhạt giống ảnh */
+    border: 1px solid #ffffff;   /* viền trắng mảnh */
+    border-radius: 5px;          /* bo nhẹ các góc */
+    padding: 10px 15px;          /* khoảng cách bên trong */
     width: 90%;
-    margin: 10px auto;
+    margin: 10px auto;           /* căn giữa */
 }
 
 .form-section h4 {
     margin-top: 0;
     color: #333;
+
 }
 
 .form-grid {
@@ -152,11 +129,6 @@ tr:hover {
 }
 
 .buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.buttons button {
     padding: 6px 15px;
     background-color: #2a9fd6;
     color: white;
@@ -165,24 +137,15 @@ tr:hover {
     cursor: pointer;
 }
 
-.buttons button:hover {
+
+
+.buttons :hover {
     background-color: #1b7fab;
 }
 
 .form-row {
     display: flex;
-    gap: 20px;
-    margin-bottom: 10px;
+    gap: 20px; /* khoảng cách giữa các ô trong cùng hàng */
+    margin-bottom: 10px; /* khoảng cách giữa các hàng */
     align-items: center;
-}
-
-/* ===== Footer ===== */
-footer {
-    background-color: #e6f5fa;
-    color: #2a9fd6;
-    text-align: center;
-    padding: 12px 0;
-    font-size: 14px;
-    border-top: 1px solid #ccc;
-    flex-shrink: 0; 
 }
