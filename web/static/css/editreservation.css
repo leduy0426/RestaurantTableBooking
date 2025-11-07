@@ -1,0 +1,108 @@
+/* ===============================
+   EDIT RESERVATION FORM STYLE
+   Author: Duy Lê
+   Date: 2025-11-06
+   =============================== */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f7f9fc;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 480px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="datetime-local"],
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.2s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a.cancel {
+    text-decoration: none;
+    color: #555;
+    background: #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+a.cancel:hover {
+    background: #ccc;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    button,
+    a.cancel {
+        flex: 1;
+        text-align: center;
+        margin: 5px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+}

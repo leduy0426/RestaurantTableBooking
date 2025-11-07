@@ -28,10 +28,6 @@
         <servlet-name>OrderController</servlet-name>
         <servlet-class>controllers.OrderController</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>LogoutController</servlet-name>
-        <servlet-class>controllers.LogoutController</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/ForStaff</url-pattern>
@@ -59,9 +55,5 @@
     <servlet-mapping>
         <servlet-name>OrderController</servlet-name>
         <url-pattern>/OrderController</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>LogoutController</servlet-name>
-        <url-pattern>/LogoutController</url-pattern>
     </servlet-mapping>
 </web-app>
