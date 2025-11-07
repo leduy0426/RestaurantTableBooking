@@ -15,7 +15,7 @@
                 <input type="text" name="username" placeholder="Username" required>
                 <input type="password" name="password" placeholder="Password" required>
                 <select name="role" required>
-                    <option name="role" value="">-- Select Role --</option>
+                    <option name="role" value="" disabled selected>-- Select Role --</option>
                     <option name="role" value="staff">Staff</option>
                     <option name="role" value="admin">Admin</option>
                 </select>

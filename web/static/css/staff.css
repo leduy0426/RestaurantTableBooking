@@ -21,7 +21,11 @@ body {
     border-radius: 6px;
     gap: 10px;
 }
-
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .header input[type="text"] {
     width: 250px;
@@ -125,11 +129,6 @@ tr:hover {
 }
 
 .buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.buttons button {
     padding: 6px 15px;
     background-color: #2a9fd6;
     color: white;
@@ -138,7 +137,9 @@ tr:hover {
     cursor: pointer;
 }
 
-.buttons button:hover {
+
+
+.buttons :hover {
     background-color: #1b7fab;
 }
 
