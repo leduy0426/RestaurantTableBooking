@@ -17,6 +17,12 @@
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/staff.css">
     </head>
     <body>
+        <div class="navigation-tabs">
+            <a href="ReservationController" class="nav-tab active">Reservations</a>
+            <a href="CreateOrder" class="nav-tab">Create Order</a>
+            <a href="OrderController" class="nav-tab">Order List</a>
+        </div>
+        
         <form action="ReservationController" method="POST">
                 <header class="header">
                     <h4>Search by Name: <input type="text" name="name" value="${param.name}"> <button type="submit">Search</button></h4>

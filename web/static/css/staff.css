@@ -13,6 +13,36 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* Navigation Tabs */
+.navigation-tabs {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #2a9fd6;
+    margin-bottom: 20px;
+}
+
+.nav-tab {
+    padding: 10px 20px;
+    background-color: #e6f5fa;
+    color: #2a9fd6;
+    text-decoration: none;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.nav-tab:hover {
+    background-color: #b8dce9;
+    color: #1b7fab;
+}
+
+.nav-tab.active {
+    background-color: #2a9fd6;
+    color: white;
+}
 .header {
     display: flex;
     justify-content: center;

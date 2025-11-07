@@ -3,29 +3,48 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/controllers/EditReservation.java</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/dal/MenuDAO.java</file>
             <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/models/Reservation.java</file>
-            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/views/adminDashboard.jsp</file>
-            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/views/staffDashboard.jsp</file>
-            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/models/Admin.java</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/controllers/CreateOrder.java</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/static/css/common.css</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/models/MenuItem.java</file>
             <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/WEB-INF/web.xml</file>
-            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/static/css/style.css</file>
-            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/static/css/booking-failed.css</file>
             <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/controllers/BookTableServlet.java</file>
-            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/models/Staff.java</file>
-            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/dal/AdminDAO.java</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/StaffManagement.jsp</file>
             <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/dal/DBContext.java</file>
-            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/login.jsp</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/models/Order.java</file>
             <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/index.jsp</file>
             <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/controllers/LoginController.java</file>
-            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/WEB-INF/ConnectDB.properties</file>
             <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/static/css/login.css</file>
             <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/dal/StaffDAO.java</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/static/css/staff.css</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/static/css/order.css</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/controllers/AdminController.java</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/static/css/index.css</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/views/adminDashboard.jsp</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/controllers/AddReservation.java</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/controllers/DeleteReservation.java</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/views/staffDashboard.jsp</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/models/Admin.java</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/static/css/editreservation.css</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/static/css/style.css</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/static/css/booking-failed.css</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/views/createOrder.jsp</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/models/Staff.java</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/dal/AdminDAO.java</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/controllers/OrderController.java</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/login.jsp</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/WEB-INF/ConnectDB.properties</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/static/css/createOrder.css</file>
             <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/controllers/ReservationController.java</file>
             <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/dal/ReservationDAO.java</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/views/editReservation.jsp</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/src/java/models/OrderItem.java</file>
             <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/views/bookingSuccess.jsp</file>
             <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/META-INF/context.xml</file>
             <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/views/error.jsp</file>
-            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/static/css/index.css</file>
+            <file>file:/E:/CuongGia/Kì%20học/Fall2025/PRJ301/LeDuy_Project/RestaurantTableBooking/web/views/orderList.jsp</file>
         </group>
     </open-files>
 </project-private>

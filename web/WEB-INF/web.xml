@@ -24,6 +24,10 @@
         <servlet-name>DeleteReservation</servlet-name>
         <servlet-class>controllers.DeleteReservation</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>OrderController</servlet-name>
+        <servlet-class>controllers.OrderController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/ForStaff</url-pattern>
@@ -47,5 +51,9 @@
     <servlet-mapping>
         <servlet-name>DeleteReservation</servlet-name>
         <url-pattern>/DeleteReservation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderController</servlet-name>
+        <url-pattern>/OrderController</url-pattern>
     </servlet-mapping>
 </web-app>
