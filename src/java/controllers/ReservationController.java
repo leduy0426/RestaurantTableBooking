@@ -14,6 +14,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.List;
 import models.Reservation;
+import models.Staff;
 
 /**
  *
@@ -57,7 +58,11 @@ public class ReservationController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         //processRequest(request, response);
-        
+        Staff staff = (Staff) request.getSession().getAttribute("staff");
+if (staff == null) {
+    response.sendRedirect("login.jsp"); // hoặc servlet LoginController
+    return;
+}
         StaffDAO sdao = new StaffDAO();
         List<Reservation> customers = sdao.getAllCutomer();
          
@@ -77,7 +82,11 @@ public class ReservationController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         //processRequest(request, response);
-        
+        Staff staff = (Staff) request.getSession().getAttribute("staff");
+if (staff == null) {
+    response.sendRedirect("login.jsp"); // hoặc servlet LoginController
+    return;
+}
           StaffDAO sdao = new StaffDAO();
 
         String name = request.getParameter("name");

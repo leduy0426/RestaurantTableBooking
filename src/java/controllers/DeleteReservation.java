@@ -12,6 +12,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import models.Staff;
 
 /**
  *
@@ -57,7 +58,11 @@ public class DeleteReservation extends HttpServlet {
         //processRequest(request, response);
         
         String idParam = request.getParameter("id");
-
+Staff staff = (Staff) request.getSession().getAttribute("staff");
+if (staff == null) {
+    response.sendRedirect("login.jsp"); // hoặc servlet LoginController
+    return;
+}
         if (idParam != null && !idParam.isEmpty()) {
             int id = Integer.parseInt(idParam);
             StaffDAO dao = new StaffDAO();

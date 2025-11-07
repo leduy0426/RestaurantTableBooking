@@ -5,21 +5,19 @@
 
 package controllers;
 
-import dal.StaffDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import models.Reservation;
-import models.Staff;
+import jakarta.servlet.http.HttpSession;
 
 /**
  *
  * @author fpt
  */
-public class EditReservation extends HttpServlet {
+public class LogoutController extends HttpServlet {
    
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -36,10 +34,10 @@ public class EditReservation extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet EditReservation</title>");  
+            out.println("<title>Servlet LogoutController</title>");  
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet EditReservation at " + request.getContextPath () + "</h1>");
+            out.println("<h1>Servlet LogoutController at " + request.getContextPath () + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -57,18 +55,12 @@ public class EditReservation extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         //processRequest(request, response);
-          String idParam = request.getParameter("id");
-        int id = Integer.parseInt(idParam);
-Staff staff = (Staff) request.getSession().getAttribute("staff");
-if (staff == null) {
-    response.sendRedirect("login.jsp"); // hoặc servlet LoginController
-    return;
-}
-        StaffDAO dao = new StaffDAO();
-        Reservation r = dao.getCustomerById(id); 
-
-        request.setAttribute("reservation", r);
-        request.getRequestDispatcher("views/editReservation.jsp").forward(request, response);
+            HttpSession session = request.getSession(false); 
+        if (session != null) {
+            session.invalidate(); 
+        }
+        response.sendRedirect("login.jsp"); 
+    
     } 
 
     /** 
@@ -81,24 +73,7 @@ if (staff == null) {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        //processRequest(request, response);
-        Staff staff = (Staff) request.getSession().getAttribute("staff");
-if (staff == null) {
-    response.sendRedirect("login.jsp"); // hoặc servlet LoginController
-    return;
-}
-        int id = Integer.parseInt(request.getParameter("id"));
-        String name = request.getParameter("customer_name");
-        String phone = request.getParameter("phone");
-        int tableNumber = Integer.parseInt(request.getParameter("table_number"));
-        String reservationTime = request.getParameter("reservation_time");
-        int numPeople = Integer.parseInt(request.getParameter("num_people"));
-        String note = request.getParameter("note");
-
-        StaffDAO dao = new StaffDAO();
-        dao.updateReservation(id, name, phone, tableNumber, reservationTime, numPeople, note);
-
-        response.sendRedirect("ReservationController");
+        processRequest(request, response);
     }
 
     /** 

@@ -35,5 +35,10 @@
         <button type="submit">Save</button>
         <a href="ReservationController">Cancel</a>
     </form>
+        
+                <footer>
+  <p>© 2025 Restaurant Table Booking System | Staff Portal</p>
+  <p>Group 1 - Staff Portal</p>
+</footer>
 </body>
 </html>

@@ -17,10 +17,12 @@
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/staff.css">
     </head>
     <body>
+        <div class="main-container">
         <div class="navigation-tabs">
             <a href="ReservationController" class="nav-tab active">Reservations</a>
             <a href="CreateOrder" class="nav-tab">Create Order</a>
             <a href="OrderController" class="nav-tab">Order List</a>
+              <a href="LogoutController" class="nav-tab logout">Logout</a>
         </div>
         
         <form action="ReservationController" method="POST">
@@ -109,7 +111,10 @@
         <button type="reset">RESET</button>
     </div>
 </form>
-
-        
+        </div>
+        <footer>
+  <p>© 2025 Restaurant Table Booking System | Staff Portal</p>
+  <p>Group 1 - Staff Portal</p>
+</footer>
     </body>
 </html>
