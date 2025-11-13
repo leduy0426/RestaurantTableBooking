@@ -15,7 +15,8 @@
     <body>
         <form action="AdminController" method="Post">
             <a href="${pageContext.request.contextPath}/AdminController">Staff Management</a>
-            <a href="${pageContext.request.contextPath}/index.jsp">Customer Management</a>
+            <a href="${pageContext.request.contextPath}/ReservationController">Customer Management</a>
+            <a href="${pageContext.request.contextPath}/login.jsp">Log Out</a>
         </form>
     </body>
 </html>

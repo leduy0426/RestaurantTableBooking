@@ -26,7 +26,7 @@
             <th>Staff ID</th>
             <th>Order Time</th>
             <th>Total Amount</th>
-            <th>Status</th>
+            
         </tr>
     </thead>
     <tbody>
@@ -37,7 +37,7 @@
                 <td>${o.staffId}</td>
                 <td>${o.orderTime}</td>
                 <td>${o.totalAmount}</td>
-                <td>${o.status}</td>
+                
             </tr>
         </c:forEach>
     </tbody>
@@ -46,9 +46,14 @@
 
     <div style="text-align: center; margin-top: 20px;">
         <a href="CreateOrder" style="padding: 10px 20px; background-color: #2a9fd6; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">
-            Create New Order
+            Back to order
         </a>
     </div>
     </div>
+    
+            <footer>
+  <p>© 2025 Restaurant Table Booking System | Staff Portal</p>
+  <p>Group 1 - Staff Portal</p>
+</footer>
 </body>
 </html>

@@ -7,16 +7,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Author     : nhtuy
 */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #b8e0ec;
+/* ===== Body & Layout ===== */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #b8e0ec;
+    display: flex;
+    flex-direction: column;
 }
-<<<<<<< HEAD
-=======
 
-/* Navigation Tabs */
+.main-container {
+    flex: 1 0 auto; /* phần nội dung chính giãn ra, footer luôn cuối */
+    width: 100%;
+}
+
+/* ===== Navigation Tabs ===== */
 .navigation-tabs {
     display: flex;
     gap: 10px;
@@ -45,7 +52,8 @@ body {
     background-color: #2a9fd6;
     color: white;
 }
->>>>>>> parent of 0c5f02b (sua order)
+
+/* ===== Header ===== */
 .header {
     display: flex;
     justify-content: center;
@@ -54,12 +62,6 @@ body {
     border-radius: 6px;
     gap: 10px;
 }
-.flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .header input[type="text"] {
     width: 250px;
@@ -81,8 +83,7 @@ body {
     background-color: #1b7fab;
 }
 
-/* Table */
-
+/* ===== Table ===== */
 .table-container {
     width: 95%;
     margin: 0 auto;
@@ -93,54 +94,42 @@ body {
     background-color: white;
 }
 
-.table-container {
-  width: 95%;
-  margin: 0 auto;
-  max-height: 350px;       
-  overflow-y: auto;       
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: white;
-}
-
 table {
-  width: 100%;    
-  border-collapse: collapse;      
+    width: 100%;
+    border-collapse: collapse;
 }
 
 th, td {
-  border: 1px solid #ccc;
-  padding: 8px;
-  text-align: left;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
 }
 
 th {
-  position: sticky;
-  top: 0;
-  background-color: #e6f5fa;
-  font-weight: bold;
-  z-index: 2;
+    position: sticky;
+    top: 0;
+    background-color: #e6f5fa;
+    font-weight: bold;
+    z-index: 2;
 }
 
 tr:hover {
-  background-color: #f3fbfd;
+    background-color: #f3fbfd;
 }
 
-
-/* Form section */
+/* ===== Form Section ===== */
 .form-section {
-    background-color: #b8dce9;   /* nền xanh nhạt giống ảnh */
-    border: 1px solid #ffffff;   /* viền trắng mảnh */
-    border-radius: 5px;          /* bo nhẹ các góc */
-    padding: 10px 15px;          /* khoảng cách bên trong */
+    background-color: #b8dce9;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px 15px;
     width: 90%;
-    margin: 10px auto;           /* căn giữa */
+    margin: 10px auto;
 }
 
 .form-section h4 {
     margin-top: 0;
     color: #333;
-
 }
 
 .form-grid {
@@ -163,6 +152,11 @@ tr:hover {
 }
 
 .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
     padding: 6px 15px;
     background-color: #2a9fd6;
     color: white;
@@ -171,15 +165,24 @@ tr:hover {
     cursor: pointer;
 }
 
-
-
-.buttons :hover {
+.buttons button:hover {
     background-color: #1b7fab;
 }
 
 .form-row {
     display: flex;
-    gap: 20px; /* khoảng cách giữa các ô trong cùng hàng */
-    margin-bottom: 10px; /* khoảng cách giữa các hàng */
+    gap: 20px;
+    margin-bottom: 10px;
     align-items: center;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #e6f5fa;
+    color: #2a9fd6;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+    border-top: 1px solid #ccc;
+    flex-shrink: 0; 
 }

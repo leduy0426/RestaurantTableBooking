@@ -1,15 +1,18 @@
-/* ===============================
-   EDIT RESERVATION FORM STYLE
-   Author: Duy Lê
-   Date: 2025-11-06
-   =============================== */
 
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f7f9fc;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f7f9fc;
+    display: flex;
+    flex-direction: column;
 }
+
+.main-container {
+    flex: 1 0 auto; 
+}
+
 
 .container {
     width: 480px;
@@ -19,6 +22,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 30px 40px;
 }
+
 
 h2 {
     text-align: center;
@@ -33,6 +37,7 @@ label {
     color: #444;
     margin-bottom: 6px;
 }
+
 
 input[type="text"],
 input[type="number"],
@@ -54,6 +59,7 @@ textarea:focus {
     outline: none;
 }
 
+/* ===== Buttons ===== */
 .btn-group {
     display: flex;
     justify-content: space-between;
@@ -88,7 +94,19 @@ a.cancel:hover {
     background: #ccc;
 }
 
-/* Responsive for mobile */
+
+footer {
+    background-color: #e6f5fa;
+    color: #2a9fd6;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+    border-top: 1px solid #ccc;
+    flex-shrink: 0; /* footer luôn nằm dưới */
+    margin-top: auto; /* nếu nội dung ít, vẫn đẩy xuống dưới */
+}
+
+/* Responsive  */
 @media (max-width: 600px) {
     .container {
         width: 90%;

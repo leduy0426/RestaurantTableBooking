@@ -119,7 +119,7 @@ public class AdminController extends HttpServlet {
                 staff.setPassword(null);
             }
 
-            // Xử lý ngày sinh (vì người dùng có thể để trống)
+        
             if (birthdate != null && !birthdate.isEmpty()) {
                 staff.setBirthdate(java.sql.Date.valueOf(birthdate));
             } else {
@@ -151,7 +151,7 @@ public class AdminController extends HttpServlet {
                 staff.setPassword(null);
             }
 
-            // Xử lý ngày sinh (vì người dùng có thể để trống)
+            
             if (birthdate != null && !birthdate.isEmpty()) {
                 staff.setBirthdate(java.sql.Date.valueOf(birthdate));
             } else {
